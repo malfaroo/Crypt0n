@@ -4,7 +4,8 @@
   "description": "Submitted by: Marvin Alfaro (directory id: malfaroo) Group Members: Marvin Alfaro (malfaroo) App Description: Crypto Currency where you can watch charts, get current prices, allow users  to store your favorite cryptos.  YouTube Video Link:  APIs: Contact Email: marvin.alfaro2003@gmail.com",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
