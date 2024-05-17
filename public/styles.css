@@ -1,0 +1,101 @@
+html{
+    font-family : 'Consolas';
+    /*I like the terminal look*/
+}
+body{
+    
+    
+    background-color : #f1f1f1; 
+    color : #333; 
+    margin : 10px; 
+    padding : 100px; 
+    line-height : 1.5; 
+}
+
+h1,h2,h3,h4 {
+    color : #3b3b3b;  
+}
+
+a{
+    color : rgb(0, 109, 218);  
+    text-decoration : none; 
+}
+
+a :hover {
+    text-decoration : underline; 
+}
+
+
+ul {
+    list-style-type : none; 
+  
+    padding : 0; 
+}
+
+li {
+    margin-bottom : 15px; 
+}
+
+
+button {
+    background-color : #0084ff;
+
+     color : white; 
+    border : none; 
+    padding : 10px  20px; 
+    margin : 5px; 
+    
+    border-radius : 5px; 
+    cursor : pointer; 
+}
+
+button :hover {
+    background-color : #0056b3; 
+}
+
+form {
+    background : white; 
+     padding : 25px; 
+  
+    border-radius : 8px; 
+
+    box-shadow : 0 2px 5px rgba(0,0,0,0.1);  
+}
+
+
+input[type = "text"],  
+input[type = "password"] {
+
+    width : calc(100% - 22px); 
+    padding : 10px;  
+      
+    margin-bottom : 8px; 
+    border : 1px solid #ccc;  
+    border-radius : 4px; 
+}
+
+input[type = "submit"],
+input[type = "button"] {
+    cursor : pointer; 
+    width : 100%; 
+    padding : 10px; 
+    border : 1px solid #ccc; 
+    background-color : #007BFF; 
+    margin-top : 8px; 
+    
+    color : white; 
+    
+}
+
+input[type = "submit"] :hover, 
+input[type = "button"] :hover { 
+    background-color : #0056b3;  
+}
+
+input[type = "checkbox"] {  
+    margin : 10px; 
+} 
+
+
+
+

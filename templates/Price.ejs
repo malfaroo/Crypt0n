@@ -1,0 +1,38 @@
+<!-- DO NOT MODIFY THIS FILE -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+	<title>Current price of <%= name %> (<%= symbol%>) </title>
+
+    <script>
+        function addToFAV(info) {
+            fetch('/Favorite', {
+                method : 'post', 
+                headers : {'Content-Type' : 'application/json'}, 
+                body : JSON.stringify( {cryptoSymbol : info} )
+            }).then(res => res.text()).then(data => alert(data)).catch(
+                error => console.error('There was an error adding your favorite: ', error) 
+            ); 
+        }
+    </script>
+    
+</head>
+
+<body>
+    <h1>Crypto Price Information</h1>
+    <p>Name: <strong><%= name %></strong></p>
+    <p>Symbol: <strong><%= symbol %></strong></p>
+    <p>Current Price: <strong>$<%= parseFloat(cryptoPrice).toFixed(2) %></strong></p>
+
+    <% if (user) { %>
+        <button onclick="addToFAV('<%= symbol %>')">Add to Favorites</button>
+    <% } %> 
+    <h4><a href="/">CRYPT0N</a></h4>
+    <hr>
+</body>
+
+</html>

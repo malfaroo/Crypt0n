@@ -1,0 +1,41 @@
+<!-- DO NOT MODIFY THIS FILE -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/styles.css">
+	<title>Welcome to Crypt0n</title>
+    
+</head>
+
+<body>
+    <h1>Welcome To The CRYPT0N Crypto Tracker</h1>
+	<% if (user) { %>
+		<h3>Welcome back, <%= user.username %> !</h3>
+		<button onclick="window.location.href='/Favorites'">Manage Favorites</button>
+		<br> <br>
+		<a href="/Logout"> Logout </a>
+	<% } else { %> 
+		$$$ <a href="/Login"><strong>LOGIN</strong></a> $$$ 
+		<a href="/Register"><strong>REGISTER</strong></a> $$$
+	<% } %> 
+
+	<br> <br>
+
+	<form action="/Track" method="post">
+		<label for="crypto_Name">Enter Cryptocurrency Code (ex. BTC): </label>
+		<input type="text" id="crypto_Name" name="crypto_Name" required> 
+		<input type="submit" value="Track Current Price">
+	</form>
+
+	<br> 
+	<form action="/List" method="post">
+		<label for="crypto_Name">Get List of Cryptos: </label> 
+		<input type="submit" value="Get List">
+	</form>
+
+</body>
+
+</html>

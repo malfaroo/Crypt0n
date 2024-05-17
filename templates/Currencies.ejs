@@ -1,0 +1,31 @@
+<!-- DO NOT MODIFY THIS FILE -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+	<title>List of Some Cryptos</title>
+    
+</head>
+
+<body>
+    <h1>Crypto List</h1>
+    <h4><a href="/">CRYPT0N</a></h4>
+
+    <% if ( datas.length > 0) { %>
+        <ul>
+            <% datas.forEach(function(crypto) { %> 
+                <li><strong><%= crypto.name %> </strong> - Code: <%= crypto.code%></li>
+                <%});%>
+        </ul>
+        <%}%>
+
+        <h4><a href="/">CRYPT0N</a></h4>
+
+        <hr>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!-- DO NOT MODIFY THIS FILE -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+	<title>Managing Favorites</title>
+
+    <script>
+        function removeFav(info) {
+            fetch('/RemoveFavorite', {
+                method : 'post', headers : {'Content-Type' : 'application/json'},
+                body : JSON.stringify( {cryptoSymbol : info})
+            }).then(res => res.text()).then
+            (data => {alert(data); window.location.reload();}).catch(
+             console.error('There was an error removing favorite: ', error)
+            ); 
+        }
+
+        function removeALLFAV() {
+            fetch('/RemoveALLFavorites', {
+                method : 'post'
+            }).then(res => res.text()).then
+            (data => {alert(data); window.location.reload();}).catch(
+                console.error('There was an error removing all favorites: ', error)
+            ); 
+        }
+    </script>
+    
+</head>
+
+<body>
+    <h1>Your Favorite Cryptos</h1>
+    <% if (favorites.length > 0) { %>
+        <ul>
+            <% favorites.forEach( function(favorite ) { %>
+                <li>
+                    <%= favorite %> <button onclick="removeFav('<%= favorite %>')">Remove</button>
+                </li>
+                <% }); %> 
+        </ul>
+        <button onclick="removeALLFAV()">Remove ALL</button>
+        <% } else { %>
+            <p>NO FAVORITES ADDED</p>
+            <% } %>
+    <h4><a href="/">CRYPT0N</a></h4>
+    <hr>
+</body>
+
+</html>
