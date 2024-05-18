@@ -304,7 +304,7 @@ app.get('/Favorites', async (req, res ) => {
 }); 
 
 //end 
-app.listen(portNumber, '0.0.0.0', () => {
-    console.log(`Web server started and running at http://0.0.0.0:${portNumber}`); 
+app.listen(portNumber, () => {
+    console.log(`Web server started and running at ${portNumber}`); 
     reading.prompt();
 }); 
